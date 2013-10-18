@@ -1,0 +1,40 @@
+#!/bin/zsh
+
+alias mv='nocorrect mv'       # no spelling correction on mv
+alias cp='nocorrect cp'       # no spelling correction on cp
+alias mkdir='nocorrect mkdir' # no spelling correction on mkdir
+alias man='nocorrect man'
+alias find='noglob find -path .*/.* -prune , -type f'
+alias scp='noglob scp'
+
+alias mutt="TERM=xterm-color mutt"
+alias h='history -100'
+alias pd=pushd
+alias pop=popd
+alias sl=ls
+alias ks=ls
+alias s=ls
+alias ake=make
+alias amke=make
+alias clr='clear'
+alias term='echo $TERM'
+alias cd..='cd ../..'
+alias cd/='cd /'
+alias cvs-stat="cvs status | grep Status: | grep -v Up-to-date"
+alias findh='find . -name "*.h" -print | xargs grep'
+alias findc='find . -name "*.c" -print | xargs grep'
+alias findch='find . -name "*.[ch]" -print | xargs grep'
+alias engineering='ssh -g -L 2401:control:2401 maxwell'
+alias sourceforge='ssh -l sborho mountapp.sourceforge.net'
+alias dh='dirs -v'
+alias fbigrpms='rpm --qf "%{SIZE}\t%{NAME}\n" -qa | sort -nr | less'
+alias mcprint='a2ps --pretty-print=c'
+
+
+#acroread hack
+#alias acroread='LANG=en_US.iso885915 /usr/bin/acroread'
+
+alias myprocs="ps -eaf | grep $USER"
+alias vi='vim -X'
+
+alias devenv='(/cygdrive/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio\ 11.0/Common7/IDE/WDExpress.exe&)'
