@@ -40,6 +40,11 @@ rationalize-path ()
   '
 }
 
+# enable remote ssh X11 forwarding
+if [ `uname -o` = "Cygwin" ]; then
+  export DISPLAY=localhost:0.0
+fi
+
 # lang setup
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
