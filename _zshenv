@@ -53,7 +53,17 @@ export LANGUAGE="en_US.UTF-8"
 #export http_proxy=http://wwwgate0-ch.mot.com:1080
 export ARCH=$CPUTYPE
 export ZDOTDIR=~/.shell
-export JAVA_HOME=~/bin/jdk
+
+
+if [ `uname -o` != "Cygwin" ]; then
+export JAVA_HOME=/usr/java/jdk1.7.0_45
+export JRE_HOME=$JAVA_HOME/jre
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+fi
+
+#export JAVA_HOME=/usr/java/jdk1.7.0_45
+#export JRE_HOME=$JAVA_HOME/jre
 export ANDROID_JAVA_HOME=$JAVA_HOME
 
 export TERM=xterm
