@@ -56,11 +56,14 @@ export ZDOTDIR=~/.shell
 
 
 if [ `uname -o` != "Cygwin" ]; then
-export JAVA_HOME=/usr/java/jdk1.7.0_45
+  export JAVA_HOME=/usr/java/jdk1.7.0_45
+else
+  export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.7.0_45"
+fi
+
 export JRE_HOME=$JAVA_HOME/jre
 export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
-fi
 
 #export JAVA_HOME=/usr/java/jdk1.7.0_45
 #export JRE_HOME=$JAVA_HOME/jre
@@ -87,4 +90,4 @@ ld_path=( /usr/local/lib $ld_path )
 typeset -U path cdpath manpath fpath ld_path
 
 
-CYGWIN="${CYGWIN} nodosfilewarning"; export CYGWIN
+CYGWIN="${CYGWIN} nodosfilewarning winsymlinks:native"; export CYGWIN
