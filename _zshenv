@@ -17,6 +17,8 @@ limit -s
 
 umask 022
 
+path=( /bin /usr/bin /sbin /usr/sbin /usr/local/sbin /usr/local/share/bin $path )
+
 # enable remote ssh X11 forwarding
 if [ `uname -o` = "Cygwin" ]; then
   export DISPLAY=localhost:0.0
