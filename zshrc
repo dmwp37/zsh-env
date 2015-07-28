@@ -230,7 +230,7 @@ fi
 
 # List only directories and symbolic
 # links that point to directories
-alias ll='ls -l'
+alias ll='ls -l --group-directories-first'
 alias lsd='ls -ld *(-/DN)'
 
 # List only file beginning with "."
