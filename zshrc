@@ -183,7 +183,7 @@ zshrc_load_status 'loading aliases'
 [ -f ~/.shell/aliases ] && . ~/.shell/aliases
 [ -f ~/.shell/local_aliases ] && . ~/.shell/local_aliases
 
-zshrc_load_status 'loading functions'
+# zshrc_load_status 'loading functions'
 
 # Executed each time you change directories.  It updates the xterm title
 function chpwd
@@ -219,7 +219,7 @@ namedir() { export $1=$PWD && : ~$1 }
 # have the executable bit on (the executable bit is not necessary, but
 # gives you an easy way to stop the autoloading of a particular shell
 # function).
-for func in ~/.zfunc/*(N-.x:t); autoload $func
+# for func in ~/.zfunc/*(N-.x:t); autoload $func
 
 #local _myhosts 
 #_myhosts=(${${${${(f)"$(<$HOME/.ssh/known_hosts)"}:#[0-9]*}%%\ *}%%,*})
