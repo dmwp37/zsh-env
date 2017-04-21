@@ -257,12 +257,14 @@ if (dircolors &>/dev/null); then
  fi
   alias ls='ls -hF --color=auto --show-control-chars'
 else
-  alias ls='ls -l'
+  export CLICOLOR=1
+  zstyle ':completion:*:default' list-colors ''
+  alias ls='ls -hFG'
 fi
 
 # List only directories and symbolic
 # links that point to directories
-alias ll='ls -l --group-directories-first'
+alias ll='ls -l'
 alias lsd='ls -ld *(-/DN)'
 
 # List only file beginning with "."

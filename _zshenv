@@ -19,10 +19,12 @@ umask 022
 
 path=( /bin /usr/bin /sbin /usr/sbin /usr/local/sbin /usr/local/share/bin $path )
 
+source ~/.cargo/env
+
 # enable remote ssh X11 forwarding
-if [ `uname -o` = "Cygwin" ]; then
-  export DISPLAY=localhost:0.0
-fi
+#if [ `uname -o` = "Cygwin" ]; then
+#  export DISPLAY=localhost:0.0
+#fi
 
 # lang setup
 export LC_ALL="en_US.UTF-8"
@@ -34,16 +36,16 @@ export ARCH=$CPUTYPE
 export ZDOTDIR=~/.shell
 
 
-if [ `uname -o` != "Cygwin" ]; then
-  export JAVA_HOME=/usr/java/jdk1.7.0_45
-else
-  export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.7.0_45"
-fi
+#if [ `uname -o` != "Cygwin" ]; then
+#  export JAVA_HOME=/usr/java/jdk1.7.0_45
+#else
+#  export JAVA_HOME="/cygdrive/c/Program Files/Java/jdk1.7.0_45"
+#fi
 
-export JRE_HOME=$JAVA_HOME/jre
-export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+#export JRE_HOME=$JAVA_HOME/jre
+#export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
 
-export ANDROID_JAVA_HOME=$JAVA_HOME
+#export ANDROID_JAVA_HOME=$JAVA_HOME
 
 export TERM=xterm
 export LESS_TERMCAP_mb=$'\E[01;31m'
@@ -55,5 +57,8 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 #path is managed in .shell/.zshrc
+export RUSTUP_DIST_ROOT=https://mirrors.ustc.edu.cn/rust-static
 
-CYGWIN="${CYGWIN} nodosfilewarning winsymlinks:native"; export CYGWIN
+#CYGWIN="${CYGWIN} nodosfilewarning winsymlinks:native"; export CYGWIN
+source ~/.zshrc
+
