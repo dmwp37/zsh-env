@@ -54,11 +54,10 @@ export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
-source ~/.shell/sol.dark
 #path is managed in .shell/.zshrc
-export RUSTUP_DIST_ROOT=https://mirrors.ustc.edu.cn/rust-static
-
-export RUST_SRC_PATH='D:\\project\\rust\\rust\\src'
-export RUSTUP_DIST_ROOT=https://mirrors.ustc.edu.cn/rust-static
+#export RUST_SRC_PATH=~/project/rust/rust/src
+export RUSTUP_DIST_SERVER=http://mirrors.ustc.edu.cn/rust-static
+export RUSTUP_UPDATE_ROOT=http://mirrors.ustc.edu.cn/rust-static/rustup
+export LD_LIBRARY_PATH=~/lib:~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib:$LD_LIBRARY_PATH
 
 CYGWIN="${CYGWIN} nodosfilewarning winsymlinks:native"; export CYGWIN

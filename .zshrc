@@ -31,7 +31,7 @@ typeset -TU LD_LIBRARY_PATH ld_path  # Tie array to LD path
 ld_path=( /usr/local/lib $ld_path  )
 
 path=( /bin /usr/bin /sbin /usr/sbin /usr/local/sbin /usr/local/share/bin $path )
-path=( ~/bin $JAVA_HOME/bin $JRE_HOME/bin $path )
+path=( ~/bin ~/.cargo/bin $JAVA_HOME/bin $JRE_HOME/bin $path )
 rationalize-path path
 
 # Remove duplicates
