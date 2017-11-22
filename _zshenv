@@ -57,7 +57,8 @@ export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
 
 #path is managed in .shell/.zshrc
-export RUSTUP_DIST_ROOT=https://mirrors.ustc.edu.cn/rust-static
+export RUST_SRC_PATH=~/.rustup/toolchains/nightly-x86_64-apple-darwin/lib/rustlib/src/rust/src
+export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static
 
 #CYGWIN="${CYGWIN} nodosfilewarning winsymlinks:native"; export CYGWIN
 source ~/.zshrc

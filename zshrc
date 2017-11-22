@@ -132,11 +132,11 @@ zshrc_load_status 'setting environment'
 # fignore=( .o )
 
 #cdpath=( . ~/p4/athena ~ )
-#fpath=( $fpath ~/.zfunc)
+fpath=( $fpath ~/.shell/.zfunc)
 
-SSHDIR="${HOME}/.ssh"
-SSH_AUTH_SOCK="${SSHDIR}/.ssh-agent-socket"
-export SSHDIR SSH_AUTH_SOCK
+#SSHDIR="${HOME}/.ssh"
+#SSH_AUTH_SOCK="${SSHDIR}/.ssh-agent-socket"
+#export SSHDIR SSH_AUTH_SOCK
 
 PROMPT='%{[22;31m%}<%{[22;32m%}%n@%m%{[01;37m%}:%{[22;33m%}%~%{[22;31m%}>
 %{[00m%}$ '
