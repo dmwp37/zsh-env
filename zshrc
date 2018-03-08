@@ -132,7 +132,7 @@ zshrc_load_status 'setting environment'
 # fignore=( .o )
 
 #cdpath=( . ~/p4/athena ~ )
-#fpath=( $fpath ~/.zfunc)
+fpath=( $fpath ~/.shell/zfunc)
 
 SSHDIR="${HOME}/.ssh"
 SSH_AUTH_SOCK="${SSHDIR}/.ssh-agent-socket"
