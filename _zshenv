@@ -29,7 +29,8 @@ export LC_ALL="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 
-#export http_proxy=http://wwwgate0-ch.mot.com:1080
+export http_proxy=http://127.0.0.1:1080
+export no_proxy=192.168.99.100
 export ARCH=$CPUTYPE
 export ZDOTDIR=~/.shell
 
@@ -59,5 +60,15 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 export RUSTUP_DIST_SERVER=http://mirrors.ustc.edu.cn/rust-static
 export RUSTUP_UPDATE_ROOT=http://mirrors.ustc.edu.cn/rust-static/rustup
 export LD_LIBRARY_PATH=~/lib:~/.rustup/toolchains/nightly-x86_64-unknown-linux-gnu/lib:$LD_LIBRARY_PATH
+
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://192.168.99.100:2376"
+export DOCKER_CERT_PATH="C:\\\\Users\\huang\\.docker\\machine\\machines\\default"
+export DOCKER_MACHINE_NAME="default"
+export COMPOSE_CONVERT_WINDOWS_PATHS="true"
+
+export HEXO_ALGOLIA_INDEXING_KEY=09dbb9c9941acf3d53ba46e7d38e7fce
+export CARGO_HOME="C:\\\\Users\huang\\.cargo"
+
 
 CYGWIN="${CYGWIN} nodosfilewarning winsymlinks:native"; export CYGWIN
